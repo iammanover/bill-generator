@@ -1,0 +1,66 @@
+.sideNavbar {
+  background-color: var(--primary);
+  width: 60px;
+  min-width: 60px;
+ 
+
+  // for tooltip
+  .sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    .active {
+      color: var(--gold);
+    }
+
+    .menu-item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+
+      .icon-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        cursor: pointer;
+
+        .menu-icon {
+          font-size: 2rem;
+          transition: transform 0.2s ease-in-out;
+        }
+
+        &:hover .menu-icon {
+          transform: scale(1.1);
+        }
+
+        .tooltip {
+          position: absolute;
+          left: 120%;
+          top: 50%;
+          transform: translateY(-50%);
+          background-color: var(--primary);
+          color: white;
+          padding: 5px 10px;
+          font-size: 0.8rem;
+          border-radius: 5px;
+          white-space: nowrap;
+          opacity: 0;
+          visibility: hidden;
+          transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+        }
+
+        &:hover .tooltip {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+}
+
+
+
