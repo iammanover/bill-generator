@@ -39,10 +39,6 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         children: [
-          // {
-          //   index: true, // Redirect to default private route
-          //   element: <Navigate to={RouteConstant.CUSTOMER_LIST} replace />,
-          // },
           {
             path: RouteConstant.CUSTOMER_LIST,
             element: <CustomerList />,

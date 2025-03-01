@@ -26,7 +26,6 @@ const SideNavbar = () => {
           const Icon = items.icon;
           return (
             <NavLink
-              // className="menu-item text-white text-decoration-none d-inline-block m-2"
               className={({ isActive }) =>
                 `menu-item text-decoration-none d-inline-block m-2 ${
                   isActive ? "active" : "text-white"
