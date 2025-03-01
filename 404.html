@@ -2,11 +2,15 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <meta http-equiv="refresh" content="0; url=/bill-generator/index.html" />
     <title>Redirecting...</title>
     <script>
-      // Redirect to the index.html file
-      sessionStorage.redirect = location.pathname;
-      window.location.href = '/bill-generator/index.html';
+      // Redirect to index.html and preserve the path
+      (function () {
+        var redirectPath = window.location.pathname;
+        sessionStorage.redirect = redirectPath;
+        window.location.replace("/bill-generator/index.html");
+      })();
     </script>
   </head>
   <body>
